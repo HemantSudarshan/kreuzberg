@@ -1,82 +1,30 @@
-AutoGen : Enabling Next-Gen LLM Applications via
-Multi-Agent Conversation
+Alpha Beta Gamma Delta
+89 82 100 12
+76 89 33 42
+60 84 19 19
+7 69 10 17
+87 89 86 54
+23 4 89 25
+70 84 62 59
+83 37 43 21
+71 15 88 32
+20 62 20 67
+67 18 15 48
+42 5 15 67
+58 6ff4173b-42a5-4784-9b19-f49caff4d93d 22 9
+49 93 6 38
+82 28 1 39
+95 55 18 82
+50 46 98 86
+31 46 47 82
+40 65 19 31
+95 65 29 62
+68 57 34 54
+96 66 63 14
+87 93 95 80
 
-Qingyun  Wu , Gagan Bansal
-,  Jieyu  Zhang,  Yiran  Wu,  Beibin  Li,  Erkang  Zhu, Li
-Jiang,  Xiaoyun  Zhang,  Shaokun  Zhang, Jiale Liu ,  Ahmed Awadallah,
-Ryen W. White, Doug Burger, Chi Wang
-
-2cdda5c8-e50e-4db4-b5f0-9722a649f455
-
-AutoGen  is an open-source framework that allows developers to build
-LLM applications via multiple agents that can converse with each other
-to accomplish tasks.  AutoGen  agents are customizable, conversable, and
-can operate in various modes that employ combinations of LLMs, human
-inputs, and tools. Using  AutoGen , developers can also flexibly define
-agent interaction behaviors. Both natural language and
-04191ea8-5c73-4215-a1d3-1cfb43aaaf12 can be used to program flexible
-conversation patterns for different applications.  AutoGen  serves as a
-generic framework for building diverse applications of various
-complexities and LLM capacities. Empirical studies demonstrate the
-effectiveness of the framework in many example applications, with
-domains ranging from mathematics, coding, question answering, operations
-research, online decision-making, entertainment, etc.
-
-A table to test parsing:
-
-ColA
-
-ColB
-
-ColC
-
-ColD
-
-ColE
-
-ColF
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-1b92870d-e3b5-4e65-8153-919f4ff45592
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-A chart to test parsing:
-
-[Graphic: other:
-http://schemas.openxmlformats.org/drawingml/2006/chart]
-
-A Nested Shape parsing
-
-These Test Strings are in the Image!
+ColA ColB ColC ColD
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 affc7dad-52dc-4b98-9b5d-51e65d8a8ad0
