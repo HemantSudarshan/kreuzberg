@@ -1,16 +1,16 @@
-One
-Two
-Three
-Four
-Five
-Six
-Seven
-Eight
-Nine
-Ten
-Eleven
-Twelve
+1. One
+2. Two
+a. Three
+b. Four
+i. Five
+ii. Six
+A. Seven
+B. Eight
+I. Nine
+II. Ten
+o Eleven
+o Twelve
 Out of list!
 Start with
-Seven Start
-Eight Continue
+7. Seven Start
+8. Eight Continue
