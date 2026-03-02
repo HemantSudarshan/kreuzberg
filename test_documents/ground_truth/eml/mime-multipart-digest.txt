@@ -4,3 +4,10 @@ To: bob@example.com
 CC: carol@example.com
 BCC: dave@example.com
 This is the first message in the digest.
+
+
+This is the second message in the digest.
+
+
+This is the third message in the digest.
+
