@@ -346,4 +346,29 @@ mod tests {
         assert_eq!(cache.cache_type(), "test");
         assert!(cache.cache_dir().to_string_lossy().contains("test"));
     }
+
+    #[test]
+    fn test_sanitize_namespace() {
+        // Valid namespaces
+        assert_eq!(sanitize_namespace("valid-namespace_123"), Some("valid-namespace_123".to_string()));
+        assert_eq!(sanitize_namespace("a"), Some("a".to_string()));
+        assert_eq!(sanitize_namespace("1"), Some("1".to_string()));
+
+        // Empty namespace
+        assert_eq!(sanitize_namespace(""), None);
+
+        // Max length namespace
+        let max_ns = "a".repeat(64);
+        assert_eq!(sanitize_namespace(&max_ns), Some(max_ns));
+
+        // Too long namespaces
+        let long_ns = "a".repeat(65);
+        assert_eq!(sanitize_namespace(&long_ns), None);
+
+        // Invalid characters
+        assert_eq!(sanitize_namespace("invalid namespace"), None); // space
+        assert_eq!(sanitize_namespace("invalid!"), None); // special char
+        assert_eq!(sanitize_namespace("invalid/namespace"), None); // slash
+        assert_eq!(sanitize_namespace("nämëspäcë"), None); // non-ascii
+    }
 }
