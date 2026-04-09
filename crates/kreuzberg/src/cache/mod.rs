@@ -91,6 +91,25 @@ mod tests {
     }
 
     #[test]
+    fn test_sort_cache_by_access_time_empty() {
+        let entries: Vec<(String, f64)> = vec![];
+        let sorted = sort_cache_by_access_time(entries);
+        assert!(sorted.is_empty());
+    }
+
+    #[test]
+    fn test_sort_cache_by_access_time_duplicates() {
+        let entries = vec![
+            ("key1".to_string(), 100.0),
+            ("key2".to_string(), 100.0),
+            ("key3".to_string(), 100.0),
+        ];
+
+        let sorted = sort_cache_by_access_time(entries);
+        assert_eq!(sorted, vec!["key1", "key2", "key3"]);
+    }
+
+    #[test]
     fn test_cache_metadata() {
         let temp_dir = tempdir().unwrap();
         let cache_dir = temp_dir.path().to_str().unwrap();
