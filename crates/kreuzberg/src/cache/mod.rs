@@ -346,4 +346,5 @@ mod tests {
         assert_eq!(cache.cache_type(), "test");
         assert!(cache.cache_dir().to_string_lossy().contains("test"));
     }
+
 }

@@ -172,3 +172,36 @@ pub fn sanitize_namespace(namespace: &str) -> Option<String> {
         None
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sanitize_namespace() {
+        // Valid inputs
+        assert_eq!(
+            sanitize_namespace("valid-namespace_123"),
+            Some("valid-namespace_123".to_string())
+        );
+        assert_eq!(sanitize_namespace("abc"), Some("abc".to_string()));
+
+        // Exact maximum length (64 chars)
+        let exact_len = "a".repeat(64);
+        assert_eq!(sanitize_namespace(&exact_len), Some(exact_len.clone()));
+
+        // Empty input
+        assert_eq!(sanitize_namespace(""), None);
+
+        // Too long (> 64 chars)
+        let too_long = "a".repeat(65);
+        assert_eq!(sanitize_namespace(&too_long), None);
+
+        // Invalid characters
+        assert_eq!(sanitize_namespace("invalid namespace"), None); // space
+        assert_eq!(sanitize_namespace("invalid/namespace"), None); // slash
+        assert_eq!(sanitize_namespace("invalid@namespace"), None); // at symbol
+        assert_eq!(sanitize_namespace("invalid\nnamespace"), None); // newline
+        assert_eq!(sanitize_namespace("ñamespace"), None); // non-ascii
+    }
+}
